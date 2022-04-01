@@ -1,0 +1,68 @@
+﻿@model WEBBG.Models.KHACHHANG
+
+@{
+    ViewBag.Title = "Chitiet";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 style="text-align:center; color: red;">Chi tiết khách hàng</h2>
+
+<div class="container">
+
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            HỌ TÊN
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOTEN)
+        </dd>
+
+        <dt>
+            TÀI KHOẢN
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TAIKHOAN)
+        </dd>
+
+        <dt>
+            MẬT KHẨU
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MATKHAU)
+        </dd>
+
+        <dt>
+            EMAIL
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAIL)
+        </dd>
+
+        <dt>
+            SỐ ĐIỆN THOẠI
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIENTHOAIKH)
+        </dd>
+
+        <dt>
+            ĐỊA CHỈ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIACHI)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Sua", new { id = Model.MAKH }) |
+    @Html.ActionLink("Trở về", "Index")
+</p>

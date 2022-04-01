@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Xacnhandonhang";
+    Layout = "~/Views/Shared/_LayoutSite.cshtml";
+}
+
+<div class="text-center">
+    <h4 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">ĐƠN HÀNG ĐÃ ĐƯỢC GHI NHẬN</h4><p>@Html.ActionLink("VỀ TRANG CHỦ", "Index", "Site")</p>
+    <div class="thanhtoan" ><a href="@Url.Action("Payment","ThanhToanMOMO")" style="text-decoration:none;">
+        Thanh Toan Qua MOMO  </a></div>
+    <style>
+                .thanhtoan a {
+                color: red;
+                font: 5px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                border:5px solid #00ffff;
+                border-radius:10px;
+            }
+    </style>
+
+</div>
+

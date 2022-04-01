@@ -1,0 +1,48 @@
+﻿@model WEBBG.Models.NCC
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h3 style="text-align:center;color:red;">XÓA NHÀ CUNG CẤP</h3>
+
+<h4>Bạn có muốn xóa?</h4>
+<div class="container">
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            TÊN NHÀ CUNG CẤP
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENNCC)
+        </dd>
+
+        <dt>
+            ĐỊA CHỈ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIACHI)
+        </dd>
+
+        <dt>
+            ĐIỆN THOẠI
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIENTHOAI)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

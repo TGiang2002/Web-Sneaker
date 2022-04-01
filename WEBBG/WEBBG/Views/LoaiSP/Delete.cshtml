@@ -1,0 +1,32 @@
+﻿@model WEBBG.Models.LOAISP
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h3 style="text-align:center;color:red;">Xóa Loại Sản Phẩm</h3>
+
+<h4>Bạn có muốn xóa?</h4>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            TÊN LOẠI
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENLOAI)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

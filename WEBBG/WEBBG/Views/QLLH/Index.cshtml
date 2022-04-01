@@ -1,0 +1,52 @@
+﻿@model IEnumerable<WEBBG.Models.LIENHE>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h3 style="text-align:center;color:red;">QUẢN LÝ LIÊN HỆ</h3>
+
+<p>
+    @*@Html.ActionLink("THÊM LIEN HE", "Create")*@
+</p>
+<table class="table">
+    <tr>
+        <th>
+            HỌ TÊN
+        </th>
+        <th>
+            EMAIL
+        </th>
+        <th>
+            CHỦ ĐỀ
+        </th>
+        <th>
+            NỘI DUNG
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HOTEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMAIL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CHUDE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOIDUNG)
+        </td>
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.MALIENHE }) |*@
+            @Html.ActionLink("Details", "Details", new { id=item.MALIENHE }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MALIENHE })
+        </td>
+    </tr>
+}
+
+</table>

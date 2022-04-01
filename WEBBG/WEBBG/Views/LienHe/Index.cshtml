@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "Liên Hệ";
+    Layout = "~/Views/Shared/_LayoutSite.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>THÔNG TIN LIÊN HỆ </h3>
+            <p>Tên cửa hàng: Cửa hàng ABC</p>
+            <p>Địa chỉ: Xa lộ Hà Nội,TP.Thủ Đức</p>
+            <p>SĐT: 081457677</p>
+            <p>Email: abc@gmail.com</p>
+            <p>Chi nhánh 1: Bình thạnh, TP.HCM</p>
+            <p>Chi nhánh 2: Hà Nội</p>
+
+        </div>
+        <div class="col-md-6">
+            <div class="lienhe">
+                <h3>LIÊN HỆ</h3>
+                <table align="center">
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.ValidationSummary(true)
+
+
+                        <tr style="height:40px">
+                            <td>Họ tên </td>
+                            <td>
+                                @Html.TextBox("HoTenKH")
+                                @ViewData["Loi1"]
+                            </td>
+                        </tr>
+                        <tr style="height:40px">
+                            <td>Email</td>
+                            <td>
+                                @Html.TextBox("Email")
+                                @ViewData["Loi2"]
+                            </td>
+                        </tr>
+
+                        <tr style="height:40px">
+                            <td>Chủ Đề</td>
+                            <td>
+                                @Html.TextBox("ChuDe")
+                                @ViewData["Loi3"]
+                            </td>
+                        </tr>
+                        <tr style="height:100px">
+                            <td>Nội dung</td>
+                            <td>
+                                @Html.TextArea("NoiDung")
+                                @ViewData["Loi4"]
+                            </td>
+                        </tr>
+
+                        <tr style="height:40px">
+                            <td></td>
+                            <td>
+                                <input type="Submit" value="Gửi liên hệ" />
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <div class="row mt-3">
+        <div class=" col-md-12 text-center">
+            <h3>BẢN ĐỒ</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7837.036092823089!2d106.79270267445803!3d10.848146856222352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527c3debb5aad%3A0x5fb58956eb4194d0!2zxJDhuqFpIEjhu41jIEh1dGVjaCBLaHUgRQ!5e0!3m2!1svi!2s!4v1624124844160!5m2!1svi!2s" width="800"  height="550" style="border:0;" allowfullscreen="" loading="lazy" ></iframe>
+        </div>
+
+    </div>
+</div>
+<style>
+    .lienhe{
+        border:2px solid #8e86aa;
+        border-radius:10px ;
+        margin-top:5px;
+    }
+</style>

@@ -1,0 +1,26 @@
+﻿@model WEBBG.Models.LOAISP
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h3 style="text-align:center;color:red;">CHI TIẾT SẢN PHẨM</h3>
+
+<div class="container">
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            TÊN LOẠI
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENLOAI)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MALOAI }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

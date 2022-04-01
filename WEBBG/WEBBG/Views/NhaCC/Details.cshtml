@@ -1,0 +1,42 @@
+﻿@model WEBBG.Models.NCC
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h3 style="text-align:center;color:red;">CHI TIẾT NHÀ CUNG CẤP</h3>
+
+<div class="container">
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            TÊN NHÀ CUNG CẤP
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENNCC)
+        </dd>
+
+        <dt>
+            ĐỊA CHỈ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIACHI)
+        </dd>
+
+        <dt>
+            ĐIỆN THOẠI
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIENTHOAI)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MANCC }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

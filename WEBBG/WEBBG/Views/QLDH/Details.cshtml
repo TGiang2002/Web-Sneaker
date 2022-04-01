@@ -1,0 +1,58 @@
+﻿@model WEBBG.Models.DONDATHANG
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h3 style="text-align:center">CHI TIẾT ĐƠN ĐẶT HÀNG</h3>
+
+<div class="container">
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            HỌ TÊN
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KHACHHANG.HOTEN)
+        </dd>
+
+        <dt>
+            TÌNH TRẠNG GIAO
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TINHTRANGGIAOHANG)
+        </dd>
+
+        <dt>
+            NGÀY ĐẶT
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NGAYDAT)
+        </dd>
+
+        <dt>
+            NGÀY GIAO
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NGAYGIAO)
+        </dd>
+
+        <dt>
+            MÃ KH
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MAKH)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.MADH }) |*@
+    @Html.ActionLink("Trở Về", "Index")
+</p>
